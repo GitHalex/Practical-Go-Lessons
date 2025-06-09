@@ -8,6 +8,7 @@ import (
 const PI float64 = 3.14 // global constant
 
 func main() {
+
 	fmt.Println("Hello World")
 	fmt.Println((4 <= 6))
 	name := "Alex"
