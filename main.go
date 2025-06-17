@@ -1,5 +1,6 @@
 package main
 
+//los packeges son la forma de GO de organizar y reutilizar codig
 import (
 	"fmt"
 	"strconv"
