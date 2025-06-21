@@ -51,4 +51,47 @@ func main() {
 	var x, y int = 100, 90
 	fmt.Println(!(((x + y) >> 2) == 47))
 
+	fmt.Println("###############")
+	//var a, b string = "kolkata", "Kolkata"
+	//if a == b {
+	//	fmt.Println("strings are equal")
+	//} else {
+	//	fmt.Println("strings are not equal")
+	//}
+	//fmt.Println("thank you!")
+
+	var i int = 10
+	switch i {
+	case -5:
+		fmt.Println("i is -5")
+	case 10:
+		fmt.Println("i is 10")
+		fallthrough
+	case 20:
+		fmt.Println("i is 20")
+		fallthrough
+	default:
+		fmt.Println("default")
+	}
+
+	day := "wednesday"
+	switch day {
+	case "monday":
+		fmt.Println("monday")
+	case "tuesday":
+		fmt.Println("tuesday")
+	case "wednesday":
+		fmt.Println("wednesday")
+		fallthrough
+	case "thursday":
+		fmt.Println("thursday")
+		fallthrough
+	case "friday":
+		fmt.Println("friday")
+	case "saturday", "sunday":
+		fmt.Println("weekend")
+	default:
+		fmt.Println("default")
+	}
+
 }
