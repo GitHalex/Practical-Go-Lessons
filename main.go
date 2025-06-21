@@ -33,7 +33,22 @@ func main() {
 	fmt.Println(city == city_2)
 	fmt.Println(city != city_2)
 
-	var i int = 1
-	i++
-	fmt.Println(i)
+	//var i int = 1
+	//i++
+	//fmt.Println(i)
+	//fmt.Println("###########################")
+	//var x, y int = 12, 25
+	//z := x & y
+	//fmt.Println(z)
+
+	//var x, y int = 100, 90
+	//fmt.Println(x & y)
+	//fmt.Println(x | y)
+
+	//var x, y int = 100, 90
+	//fmt.Println((x +
+
+	var x, y int = 100, 90
+	fmt.Println(!(((x + y) >> 2) == 47))
+
 }
