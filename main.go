@@ -94,4 +94,19 @@ func main() {
 		fmt.Println("default")
 	}
 
+	var grades [3]int
+	fmt.Println(grades)
+
+	var numeros [3]int = [3]int{10, 20, 30}
+	fmt.Println(numeros)
+
+	enteros := [3]int{10, 20}
+	fmt.Println(enteros)
+
+	n := [...]int{10, 20, 30}
+	fmt.Println(n)
+
+	var fruits [2]string = [2]string{"apples", "oranges"}
+	fmt.Println(len(fruits))
+
 }
