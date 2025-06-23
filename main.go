@@ -109,4 +109,40 @@ func main() {
 	var fruits [2]string = [2]string{"apples", "oranges"}
 	fmt.Println(len(fruits))
 
+	for index, element := range fruits {
+		fmt.Println(index, "=>", element)
+	}
+
+	//arr := [5]bool{true, true, true, true}
+	//for i := 0; i < len(arr); i++ {
+	//	if arr[i] {
+	//		fmt.Println(i)
+	//	}
+	//}
+
+	//arreglo := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
+	//slice := arreglo[1:8]
+	//fmt.Println(slice)
+	//
+	//sub_slice := slice[0:3]
+	//fmt.Println(sub_slice)
+
+	slice_one := make([]int, 5, 10)
+	fmt.Println(slice_one)
+	fmt.Println(len(slice_one))
+	fmt.Println(cap(slice_one))
+
+	//fmt.Println("#############")
+	//arr := [5]string{"a", "b", "c", "d", "e"}
+	//slice := arr[:4]
+	//fmt.Println(slice)
+
+	arr := [5]string{"a", "b", "c", "d", "e"}
+	slice := arr[:4]
+	fmt.Println(arr)
+	fmt.Println(slice)
+	slice[1] = "x"
+	fmt.Println(arr)
+	fmt.Println(slice)
+
 }
