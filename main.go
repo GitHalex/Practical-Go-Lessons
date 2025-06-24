@@ -127,22 +127,38 @@ func main() {
 	//sub_slice := slice[0:3]
 	//fmt.Println(sub_slice)
 
-	slice_one := make([]int, 5, 10)
-	fmt.Println(slice_one)
-	fmt.Println(len(slice_one))
-	fmt.Println(cap(slice_one))
+	//slice_one := make([]int, 5, 10)
+	//fmt.Println(slice_one)
+	//fmt.Println(len(slice_one))
+	//fmt.Println(cap(slice_one))
 
 	//fmt.Println("#############")
 	//arr := [5]string{"a", "b", "c", "d", "e"}
 	//slice := arr[:4]
 	//fmt.Println(slice)
 
-	arr := [5]string{"a", "b", "c", "d", "e"}
-	slice := arr[:4]
-	fmt.Println(arr)
+	//arr := [5]string{"a", "b", "c", "d", "e"}
+	//slice := arr[:4]
+	//fmt.Println(arr)
+	//fmt.Println(slice)
+	//slice[1] = "x"
+	//fmt.Println(arr)
+	//fmt.Println(slice)
+
+	slice := make([]int, 2, 5) // length 2, capacity 5
+	fmt.Println(slice)         // [0 0]
+	fmt.Println(len(slice))    // 2
+	fmt.Println(cap(slice))    // 5
+
+	slice = append(slice, 1, 2, 3) // ahora length 5 → [0 0 1 2 3]
 	fmt.Println(slice)
-	slice[1] = "x"
-	fmt.Println(arr)
+	fmt.Println(len(slice)) // 5
+	fmt.Println(cap(slice)) // 5
+
+	slice = append(slice, 4) // excede capacidad → Go crea un arreglo nuevo
+	fmt.Println(slice)
+	fmt.Println(len(slice)) // 6
+	fmt.Println(cap(slice)) // capacidad nueva → Go la define (generalmente duplica)
 	fmt.Println(slice)
 
 }
