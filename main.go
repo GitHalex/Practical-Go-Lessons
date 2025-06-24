@@ -4,7 +4,15 @@ import "fmt"
 
 //const PI float64 = 3.14 // global constant
 
+func addNumbers(a int, b int) (sum int, diff int) {
+	sum = a + b
+	diff = a - b
+	return
+}
+
 func main() {
+	suma, diference := addNumbers(20, 10)
+	fmt.Println(suma, " ", diference)
 
 	//fmt.Println("Hello World")
 	//User input
@@ -183,5 +191,7 @@ func main() {
 	if foun {
 		fmt.Println("key B was not found")
 	}
+	//sumaOfNumbers := addNumbers(2, 3)
 
+	//fmt.Println(sumaOfNumbers)
 }
