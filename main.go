@@ -161,4 +161,27 @@ func main() {
 	fmt.Println(cap(slice)) // capacidad nueva → Go la define (generalmente duplica)
 	fmt.Println(slice)
 
+	codes := map[string]int{"en": 1, "fr": 2}
+	value, found := codes["en"]
+	fmt.Println(value, found)
+	value, found = codes["hh"]
+	fmt.Println(value, found)
+
+	languages := map[string]string{"en": "English"}
+	fmt.Println(languages)
+	valor, found := languages["en"]
+	fmt.Println(valor, found)
+	languages["it"] = "Italian"
+	fmt.Println(languages)
+
+	delete(languages, "en")
+	fmt.Println(languages)
+
+	ascii_codes := map[string]int{}
+	ascii_codes["A"] = 65
+	_, foun := ascii_codes["B"]
+	if foun {
+		fmt.Println("key B was not found")
+	}
+
 }
