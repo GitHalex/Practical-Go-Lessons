@@ -10,9 +10,20 @@ func addNumbers(a int, b int) (sum int, diff int) {
 	return
 }
 
+func factorial(num int) int {
+	if num == 0 {
+		return 1
+	}
+	return num * factorial(num-1)
+}
+
 func main() {
 	suma, diference := addNumbers(20, 10)
 	fmt.Println(suma, " ", diference)
+
+	numero := 5
+	resultado := factorial(numero)
+	fmt.Println("factorial resultado ", resultado)
 
 	//fmt.Println("Hello World")
 	//User input
