@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 //const PI float64 = 3.14 // global constant
 
@@ -24,6 +27,22 @@ func main() {
 	numero := 5
 	resultado := factorial(numero)
 	fmt.Println("factorial resultado ", resultado)
+
+	x_d := func(l int, m int) int { return l * m }
+	fmt.Println("############")
+	fmt.Println(x_d)
+	fmt.Printf("%T \n", x_d)
+	fmt.Println(x_d(20, 30))
+
+	fmt.Println("#####################ORO##############")
+	y_d := func(l int, m int) int { return l * m }(20, 30)
+	fmt.Printf("%T \n", y_d)
+	fmt.Println(y_d)
+	fmt.Println("#####################ORO##############")
+
+	miniscula := func(s string) { fmt.Println(strings.ToLower(s)) }
+	fmt.Printf("%T \n", miniscula)
+	miniscula("Rachel")
 
 	//fmt.Println("Hello World")
 	//User input
