@@ -224,4 +224,15 @@ func main() {
 	//sumaOfNumbers := addNumbers(2, 3)
 
 	//fmt.Println(sumaOfNumbers)
+
+	fmt.Println("########punteros###########")
+	variable := "Hello"
+	var primero *string = &variable
+	fmt.Println(primero)
+
+	var segundo = &variable
+	fmt.Println(segundo)
+
+	tercero := &variable
+	fmt.Println(tercero)
 }
