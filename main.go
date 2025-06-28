@@ -7,6 +7,11 @@ import (
 
 //const PI float64 = 3.14 // global constant
 
+type Student struct {
+	name   string
+	rollNo int
+}
+
 func addNumbers(a int, b int) (sum int, diff int) {
 	sum = a + b
 	diff = a - b
@@ -21,6 +26,14 @@ func factorial(num int) int {
 }
 
 func main() {
+	st := Student{
+		name:   "Joe",
+		rollNo: 12,
+	}
+	fmt.Println(st)
+	st_one := Student{"Alex", 1}
+	fmt.Println(st_one)
+
 	suma, diference := addNumbers(20, 10)
 	fmt.Println(suma, " ", diference)
 
