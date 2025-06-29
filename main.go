@@ -31,6 +31,7 @@ func main() {
 		rollNo: 12,
 	}
 	fmt.Println(st)
+	fmt.Printf("%+v\nel tipo es %T", st, st)
 	st_one := Student{"Alex", 1}
 	fmt.Println(st_one)
 
