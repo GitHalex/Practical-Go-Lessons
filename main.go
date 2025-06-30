@@ -12,6 +12,33 @@ type Student struct {
 	rollNo int
 }
 
+type Student_ interface {
+	getPercentage() int
+	getName() string
+}
+
+type Undergrad struct {
+	name    string
+	grades_ []int
+}
+
+func (u Undergrad) getPercentage() int {
+	sum := 0
+	for _, v := range u.grades_ {
+		sum += v
+	}
+	return sum / len(u.grades_)
+}
+
+func (u Undergrad) getName() string {
+	return u.name
+}
+
+func printData(s Student_) {
+	fmt.Println(s.getName())
+	fmt.Println(s.getPercentage())
+}
+
 func addNumbers(a int, b int) (sum int, diff int) {
 	sum = a + b
 	diff = a - b
@@ -26,6 +53,9 @@ func factorial(num int) int {
 }
 
 func main() {
+	grades_ := []int{90, 75, 80}
+	u := Undergrad{"Ross", grades_}
+	printData(u)
 	st := Student{
 		name:   "Joe",
 		rollNo: 12,
